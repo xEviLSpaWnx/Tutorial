@@ -1,5 +1,6 @@
 package com.evilspawn.tutorial;
 
+import com.evilspawn.tutorial.init.ModBlocks;
 import com.evilspawn.tutorial.init.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -22,6 +23,7 @@ public class Tutorial
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         ModItems.init();
+        ModBlocks.init();
 
         MinecraftForge.EVENT_BUS.register(this);
     }

@@ -1,6 +1,7 @@
 package com.evilspawn.tutorial.init;
 
 import com.evilspawn.tutorial.Tutorial;
+import com.evilspawn.tutorial.blocks.BlockItemBase;
 import com.evilspawn.tutorial.items.ItemBase;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -18,4 +19,6 @@ public class ModItems {
     }
 
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
+
+    public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(ModBlocks.RUBY_BLOCK.get()));
 }

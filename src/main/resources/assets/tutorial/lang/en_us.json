@@ -1,4 +1,7 @@
 {
   "itemGroup.tutorialTab": "Tutorial",
-  "item.tutorial.ruby": "Ruby"
+
+  "item.tutorial.ruby": "Ruby",
+
+  "block.tutorial.ruby_block": "Block Of Ruby"
 }
