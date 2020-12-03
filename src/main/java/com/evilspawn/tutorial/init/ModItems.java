@@ -3,6 +3,7 @@ package com.evilspawn.tutorial.init;
 import com.evilspawn.tutorial.Tutorial;
 import com.evilspawn.tutorial.armor.ModArmorMaterial;
 import com.evilspawn.tutorial.blocks.BlockItemBase;
+import com.evilspawn.tutorial.blocks.Oven;
 import com.evilspawn.tutorial.items.ItemBase;
 import com.evilspawn.tutorial.items.PoisonApple;
 import com.evilspawn.tutorial.tools.ModItemTier;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import sun.awt.OverrideNativeWindowHandle;
 
 public class ModItems {
 
@@ -23,9 +25,21 @@ public class ModItems {
     }
 
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
+    public static final RegistryObject<Item> SAPHIRE = ITEMS.register("saphire", ItemBase::new);
+    public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", ItemBase::new);
+
+
     public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
+    public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItemBase(ModBlocks.OVEN.get()));
 
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(ModBlocks.RUBY_BLOCK.get()));
+    public static final RegistryObject<Item> SAPHIRE_BLOCK_ITEM = ITEMS.register("saphire_block", () -> new BlockItemBase(ModBlocks.SAPHIRE_BLOCK.get()));
+    public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItemBase(ModBlocks.AMETHYST_BLOCK.get()));
+
+    // ORE BLOCKS //
+    public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(ModBlocks.RUBY_ORE.get()));
+    public static final RegistryObject<Item> SAPHIRE_ORE_ITEM = ITEMS.register("saphire_ore", () -> new BlockItemBase(ModBlocks.SAPHIRE_ORE.get()));
+    public static final RegistryObject<Item> AMETHYST_ORE_ITEM = ITEMS.register("amethyst_ore", () -> new BlockItemBase(ModBlocks.AMETHYST_ORE.get()));
 
     // RUBY TOOLS //
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTier.RUBY, 3, -2.4f, new Item.Properties().group(Tutorial.TAB)));
@@ -34,10 +48,32 @@ public class ModItems {
     public static final RegistryObject<ShovelItem> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () -> new ShovelItem(ModItemTier.RUBY, 0.5f, -3.0f, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () -> new HoeItem(ModItemTier.RUBY, -3, -1.0f, new Item.Properties().group(Tutorial.TAB)));
 
+    public static final RegistryObject<SwordItem> SAPHIRE_SWORD = ITEMS.register("saphire_sword", () -> new SwordItem(ModItemTier.SAPHIRE, 3, -2.4f, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<PickaxeItem> SAPHIRE_PICKAXE = ITEMS.register("saphire_pickaxe", () -> new PickaxeItem(ModItemTier.SAPHIRE, 0, -2.8f, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<AxeItem> SAPHIRE_AXE = ITEMS.register("saphire_axe", () -> new AxeItem(ModItemTier.SAPHIRE, 5, -3.1f, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<ShovelItem> SAPHIRE_SHOVEL = ITEMS.register("saphire_shovel", () -> new ShovelItem(ModItemTier.SAPHIRE, 0.5f, -3.0f, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<HoeItem> SAPHIRE_HOE = ITEMS.register("saphire_hoe", () -> new HoeItem(ModItemTier.SAPHIRE, -3, -1.0f, new Item.Properties().group(Tutorial.TAB)));
+
+    public static final RegistryObject<SwordItem> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ModItemTier.AMETHYST, 3, -2.4f, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<PickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new PickaxeItem(ModItemTier.AMETHYST, 0, -2.8f, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<AxeItem> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ModItemTier.AMETHYST, 5, -3.1f, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<ShovelItem> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ModItemTier.AMETHYST, 0.5f, -3.0f, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<HoeItem> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () -> new HoeItem(ModItemTier.AMETHYST, -3, -1.0f, new Item.Properties().group(Tutorial.TAB)));
+
     // RUBY ARMOR //
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(Tutorial.TAB)));
+
+    public static final RegistryObject<ArmorItem> SAPHIRE_HELMET = ITEMS.register("saphire_helmet", () -> new ArmorItem(ModArmorMaterial.SAPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<ArmorItem> SAPHIRE_CHESTPLATE = ITEMS.register("saphire_chestplate", () -> new ArmorItem(ModArmorMaterial.SAPHIRE, EquipmentSlotType.CHEST, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<ArmorItem> SAPHIRE_LEGGINGS = ITEMS.register("saphire_leggings", () -> new ArmorItem(ModArmorMaterial.SAPHIRE, EquipmentSlotType.LEGS, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<ArmorItem> SAPHIRE_BOOTS = ITEMS.register("saphire_boots", () -> new ArmorItem(ModArmorMaterial.SAPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(Tutorial.TAB)));
+
+    public static final RegistryObject<ArmorItem> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<ArmorItem> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<ArmorItem> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS, new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<ArmorItem> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(Tutorial.TAB)));
 
 }

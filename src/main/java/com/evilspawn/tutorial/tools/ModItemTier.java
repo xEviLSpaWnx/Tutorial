@@ -8,7 +8,9 @@ import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
 
-    RUBY(3, 800, 7.0f, 3.0f, 12, () -> { return Ingredient.fromItems(ModItems.RUBY.get()); });
+    RUBY(3, 800, 7.0f, 3.0f, 12, () -> { return Ingredient.fromItems(ModItems.RUBY.get()); }),
+    SAPHIRE(3, 800, 7.0f, 3.0f, 12, () -> { return Ingredient.fromItems(ModItems.SAPHIRE.get()); }),
+    AMETHYST(3, 800, 7.0f, 3.0f, 12, () -> { return Ingredient.fromItems(ModItems.AMETHYST.get()); });
 
     private final int harvestLevel;
     private final int maxUses;

@@ -2,6 +2,7 @@ package com.evilspawn.tutorial;
 
 import com.evilspawn.tutorial.init.ModBlocks;
 import com.evilspawn.tutorial.init.ModItems;
+import com.evilspawn.tutorial.world.gen.ModOreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,7 +29,11 @@ public class Tutorial
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event){}
+
+    private void setup(final FMLCommonSetupEvent event) {
+        ModOreGen.registerOre();
+    }
+
     private void doClientStuff(final FMLClientSetupEvent event) {}
 
     public static final ItemGroup TAB = new ItemGroup("tutorialTab") {
