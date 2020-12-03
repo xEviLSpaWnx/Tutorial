@@ -4,6 +4,7 @@ import com.evilspawn.tutorial.Tutorial;
 import com.evilspawn.tutorial.armor.ModArmorMaterial;
 import com.evilspawn.tutorial.blocks.BlockItemBase;
 import com.evilspawn.tutorial.items.ItemBase;
+import com.evilspawn.tutorial.items.PoisonApple;
 import com.evilspawn.tutorial.tools.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -22,6 +23,7 @@ public class ModItems {
     }
 
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
+    public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
 
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(ModBlocks.RUBY_BLOCK.get()));
 
