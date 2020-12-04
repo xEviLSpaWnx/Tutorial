@@ -1,4 +1,4 @@
-package com.evilspawn.tutorial.armor;
+package com.evilspawn.tutorial.enums;
 
 import com.evilspawn.tutorial.Tutorial;
 import com.evilspawn.tutorial.init.ModItems;

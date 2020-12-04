@@ -1,45 +1,37 @@
 package com.evilspawn.tutorial.init;
 
 import com.evilspawn.tutorial.Tutorial;
-import com.evilspawn.tutorial.armor.ModArmorMaterial;
-import com.evilspawn.tutorial.blocks.BlockItemBase;
-import com.evilspawn.tutorial.blocks.Oven;
-import com.evilspawn.tutorial.items.ItemBase;
+import com.evilspawn.tutorial.enums.ModArmorMaterial;
 import com.evilspawn.tutorial.items.PoisonApple;
-import com.evilspawn.tutorial.tools.ModItemTier;
+import com.evilspawn.tutorial.enums.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import sun.awt.OverrideNativeWindowHandle;
 
 public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Tutorial.MOD_ID);
 
-    public static void init() {
-        Tutorial.LOGGER.info("Loading items!");
-        ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-    }
-
-    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
-    public static final RegistryObject<Item> SAPHIRE = ITEMS.register("saphire", ItemBase::new);
-    public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", ItemBase::new);
+    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", () -> new Item(new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> SAPHIRE = ITEMS.register("saphire", () -> new Item(new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", () -> new Item(new Item.Properties().group(Tutorial.TAB)));
 
 
     public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
-    public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItemBase(ModBlocks.OVEN.get()));
+    public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItem(ModBlocks.OVEN.get(), new Item.Properties().group(Tutorial.TAB)));
 
-    public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(ModBlocks.RUBY_BLOCK.get()));
-    public static final RegistryObject<Item> SAPHIRE_BLOCK_ITEM = ITEMS.register("saphire_block", () -> new BlockItemBase(ModBlocks.SAPHIRE_BLOCK.get()));
-    public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItemBase(ModBlocks.AMETHYST_BLOCK.get()));
+    public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItem(ModBlocks.RUBY_BLOCK.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> SAPHIRE_BLOCK_ITEM = ITEMS.register("saphire_block", () -> new BlockItem(ModBlocks.SAPHIRE_BLOCK.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItem(ModBlocks.AMETHYST_BLOCK.get(), new Item.Properties().group(Tutorial.TAB)));
+
 
     // ORE BLOCKS //
-    public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(ModBlocks.RUBY_ORE.get()));
-    public static final RegistryObject<Item> SAPHIRE_ORE_ITEM = ITEMS.register("saphire_ore", () -> new BlockItemBase(ModBlocks.SAPHIRE_ORE.get()));
-    public static final RegistryObject<Item> AMETHYST_ORE_ITEM = ITEMS.register("amethyst_ore", () -> new BlockItemBase(ModBlocks.AMETHYST_ORE.get()));
+    public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItem(ModBlocks.RUBY_ORE.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> SAPHIRE_ORE_ITEM = ITEMS.register("saphire_ore", () -> new BlockItem(ModBlocks.SAPHIRE_ORE.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> AMETHYST_ORE_ITEM = ITEMS.register("amethyst_ore", () -> new BlockItem(ModBlocks.AMETHYST_ORE.get(), new Item.Properties().group(Tutorial.TAB)));
+
 
     // RUBY TOOLS //
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTier.RUBY, 3, -2.4f, new Item.Properties().group(Tutorial.TAB)));
@@ -59,6 +51,7 @@ public class ModItems {
     public static final RegistryObject<AxeItem> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ModItemTier.AMETHYST, 5, -3.1f, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<ShovelItem> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ModItemTier.AMETHYST, 0.5f, -3.0f, new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<HoeItem> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () -> new HoeItem(ModItemTier.AMETHYST, -3, -1.0f, new Item.Properties().group(Tutorial.TAB)));
+
 
     // RUBY ARMOR //
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(Tutorial.TAB)));

@@ -1,4 +1,4 @@
-package com.evilspawn.tutorial.tools;
+package com.evilspawn.tutorial.enums;
 
 import com.evilspawn.tutorial.init.ModItems;
 import net.minecraft.item.IItemTier;

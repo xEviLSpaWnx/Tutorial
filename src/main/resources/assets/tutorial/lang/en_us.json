@@ -47,5 +47,7 @@
   "block.tutorial.saphire_ore": "Saphire Ore",
   "block.tutorial.amethyst_ore": "Amethyst Ore",
 
-  "block.tutorial.oven": "Oven"
+  "block.tutorial.oven": "Oven",
+
+  "entity.tutorial.hog": "Hog"
 }

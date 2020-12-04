@@ -12,8 +12,7 @@ import java.util.function.Supplier;
 public class PoisonApple extends Item {
 
     public PoisonApple() {
-        super(new Item.Properties()
-                .group(Tutorial.TAB)
+        super(new Item.Properties().group(Tutorial.TAB)
                 .food(new Food.Builder()
                         .hunger(4)
                         .saturation(1.2f)
