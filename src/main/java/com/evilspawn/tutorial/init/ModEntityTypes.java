@@ -15,6 +15,6 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<HogEntity>> HOG = ENTITY_TYPES.register("hog",
             () -> EntityType.Builder.create(HogEntity::new, EntityClassification.CREATURE)
-                    .size(1.0f, 1.0f)
+                    .size(0.9f, 1.3f)
                     .build(new ResourceLocation(Tutorial.MOD_ID, "hog").toString()));
 }

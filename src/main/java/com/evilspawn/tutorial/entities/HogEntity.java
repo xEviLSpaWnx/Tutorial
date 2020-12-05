@@ -16,6 +16,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,17 +25,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class HogEntity extends AnimalEntity {
 
     public static final Ingredient TEMPTATION_ITEM = Ingredient.fromItems(Items.CARROT, Items.BEETROOT, Items.POTATO);
+
     private EatGrassGoal eatGrassGoal;
     private int hogTimer;
 
     public HogEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
         super(type, worldIn);
-    }
-
-    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
-        return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 12.0d)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25d);
     }
 
     @Override
@@ -51,6 +47,29 @@ public class HogEntity extends AnimalEntity {
         this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, 6.0f));
         this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
     }
+
+    /*// HEAD ROTATION FOR SHEEP WHEN HE EATS GRASS //
+    @OnlyIn(Dist.CLIENT)
+    public float getHeadRotationPointY(float point) {
+        if (this.hogTimer <= 0) {
+            return 0.0f;
+        } else if (this.hogTimer >= 4 && this.hogTimer <= 36) {
+            return 1.0f;
+        } else {
+            return this.hogTimer < 4 ? ((float) this.hogTimer - point) / 4.0f
+                    : -((float) (this.hogTimer - 40) -point) / 4.0f;
+        }
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public float getHeadRotationPointX(float point) {
+        if (this.hogTimer > 4 && this.hogTimer <= 36) {
+            float f = ((float) (this.hogTimer - 4) - point) / 32.0f;
+            return ((float) Math.PI / 5f) + 0.2199114f * MathHelper.sin(f * 28.7f);
+        } else {
+            return this.hogTimer > 0 ? ((float) Math.PI / 5f) : this.rotationPitch * ((float) Math.PI / 180f);
+        }
+    }*/
 
     @Override
     protected int getExperiencePoints(PlayerEntity player) {
@@ -70,6 +89,12 @@ public class HogEntity extends AnimalEntity {
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return SoundEvents.ENTITY_PIG_HURT;
+    }
+
+    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
+        return MobEntity.func_233666_p_()
+                .createMutableAttribute(Attributes.MAX_HEALTH, 12.0d)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25d);
     }
 
     @Override
@@ -104,4 +129,6 @@ public class HogEntity extends AnimalEntity {
             super.handleStatusUpdate(id);
         }
     }
+
+
 }
