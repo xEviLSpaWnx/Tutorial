@@ -5,6 +5,8 @@ import com.evilspawn.tutorial.enums.ModArmorMaterial;
 import com.evilspawn.tutorial.items.ModSpawnEgg;
 import com.evilspawn.tutorial.items.PoisonApple;
 import com.evilspawn.tutorial.enums.ModItemTier;
+import com.evilspawn.tutorial.items.SpecialCoal;
+import com.evilspawn.tutorial.items.SpecialMiniCoal;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
@@ -24,7 +26,10 @@ public class ModItems {
 
 
     public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
+    public static final RegistryObject<SpecialCoal> SPECIAL_COAL = ITEMS.register("special_coal", SpecialCoal::new);
+    public static final RegistryObject<SpecialMiniCoal> SPECIAL_MINI_COAL = ITEMS.register("special_mini_coal", SpecialMiniCoal::new);
     public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItem(ModBlocks.OVEN.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> QUARRY_ITEM = ITEMS.register("quarry", () -> new BlockItem(ModBlocks.QUARRY.get(), new Item.Properties().group(Tutorial.TAB)));
 
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItem(ModBlocks.RUBY_BLOCK.get(), new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<Item> SAPHIRE_BLOCK_ITEM = ITEMS.register("saphire_block", () -> new BlockItem(ModBlocks.SAPHIRE_BLOCK.get(), new Item.Properties().group(Tutorial.TAB)));

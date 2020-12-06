@@ -48,7 +48,10 @@
   "block.tutorial.amethyst_ore": "Amethyst Ore",
 
   "block.tutorial.oven": "Oven",
+  "block.tutorial.quarry": "Quarry",
 
   "entity.tutorial.hog": "Hog",
-  "item.tutorial.hog_spawn_egg": "Hog Spawn Egg"
+  "item.tutorial.hog_spawn_egg": "Hog Spawn Egg",
+  "item.tutorial.special_coal": "Special Coal",
+  "item.tutorial.special_mini_coal": "Special Coal"
 }

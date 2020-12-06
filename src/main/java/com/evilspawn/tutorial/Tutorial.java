@@ -4,6 +4,7 @@ import com.evilspawn.tutorial.entities.HogEntity;
 import com.evilspawn.tutorial.init.ModBlocks;
 import com.evilspawn.tutorial.init.ModEntityTypes;
 import com.evilspawn.tutorial.init.ModItems;
+import com.evilspawn.tutorial.init.ModTileEntityTypes;
 import com.evilspawn.tutorial.world.gen.ModOreGen;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
@@ -30,6 +31,7 @@ public class Tutorial
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModTileEntityTypes.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }
