@@ -49,5 +49,6 @@
 
   "block.tutorial.oven": "Oven",
 
-  "entity.tutorial.hog": "Hog"
+  "entity.tutorial.hog": "Hog",
+  "item.tutorial.hog_spawn_egg": "Hog Spawn Egg"
 }

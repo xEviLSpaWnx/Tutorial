@@ -2,6 +2,7 @@ package com.evilspawn.tutorial.init;
 
 import com.evilspawn.tutorial.Tutorial;
 import com.evilspawn.tutorial.enums.ModArmorMaterial;
+import com.evilspawn.tutorial.items.ModSpawnEgg;
 import com.evilspawn.tutorial.items.PoisonApple;
 import com.evilspawn.tutorial.enums.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -13,6 +14,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Tutorial.MOD_ID);
+
+    public static final RegistryObject<ModSpawnEgg> HOG_SPAWN_EGG = ITEMS.register("hog_spawn_egg",
+            () -> new ModSpawnEgg(ModEntityTypes.HOG, 0xF1BF7B, 0x705128, new Item.Properties().group(Tutorial.TAB)));
 
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", () -> new Item(new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<Item> SAPHIRE = ITEMS.register("saphire", () -> new Item(new Item.Properties().group(Tutorial.TAB)));
