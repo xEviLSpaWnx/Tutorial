@@ -30,6 +30,15 @@ public class ModItems {
     public static final RegistryObject<SpecialMiniCoal> SPECIAL_MINI_COAL = ITEMS.register("special_mini_coal", SpecialMiniCoal::new);
     public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItem(ModBlocks.OVEN.get(), new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<Item> QUARRY_ITEM = ITEMS.register("quarry", () -> new BlockItem(ModBlocks.QUARRY.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> TEST_BLOCK_ITEM = ITEMS.register("test_block", () -> new BlockItem(ModBlocks.TEST_BLOCK.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> TEST_BLOCK_FENCE_ITEM = ITEMS.register("test_block_fence", () -> new BlockItem(ModBlocks.TEST_BLOCK_FENCE.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> TEST_BLOCK_PRESSURE_PLATE_ITEM = ITEMS.register("test_block_pressure_plate", () -> new BlockItem(ModBlocks.TEST_BLOCK_PRESSURE_PLATE.get(), new Item.Properties().group(Tutorial.TAB)));
+    public static final RegistryObject<Item> TEST_BLOCK_BUTTON_ITEM = ITEMS.register("test_block_button", () -> new BlockItem(ModBlocks.TEST_BLOCK_BUTTON.get(), new Item.Properties().group(Tutorial.TAB)));
+
+
+
+    public static final RegistryObject<Item> TEST_BLOCK_STAIRS_ITEM = ITEMS.register("test_block_stairs", () -> new BlockItem(ModBlocks.TEST_BLOCK_STAIRS.get(), new Item.Properties().group(Tutorial.TAB)));
+
 
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItem(ModBlocks.RUBY_BLOCK.get(), new Item.Properties().group(Tutorial.TAB)));
     public static final RegistryObject<Item> SAPHIRE_BLOCK_ITEM = ITEMS.register("saphire_block", () -> new BlockItem(ModBlocks.SAPHIRE_BLOCK.get(), new Item.Properties().group(Tutorial.TAB)));

@@ -49,6 +49,11 @@
 
   "block.tutorial.oven": "Oven",
   "block.tutorial.quarry": "Quarry",
+  "block.tutorial.test_block": "Test Block",
+  "block.tutorial.test_block_button": "Test Button",
+  "block.tutorial.test_block_fence": "Test Fence",
+  "block.tutorial.test_block_pressure_plate": "Test Pressure Plate",
+  "block.tutorial.test_block_stairs": "Test Stairs",
 
   "entity.tutorial.hog": "Hog",
   "item.tutorial.hog_spawn_egg": "Hog Spawn Egg",
