@@ -48,7 +48,7 @@ public class Tutorial
     public static final ItemGroup TAB = new ItemGroup("tutorialTab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.RUBY.get());
+            return new ItemStack(ModItems.RUBY_ITEM.get());
         }
     };
 }

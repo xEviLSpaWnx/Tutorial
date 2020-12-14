@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "tutorial:items/saphire_axe"
+    "layer0": "tutorial:items/sapphire_shovel"
   }
 }

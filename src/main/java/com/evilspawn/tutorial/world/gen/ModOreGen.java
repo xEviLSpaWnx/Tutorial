@@ -32,8 +32,8 @@ public class ModOreGen {
                 .range(24).square() //Spawn height start
                 .func_242731_b(10))); //Chunk spawn frequency
 
-        overworldOres.add(register("saphire_ore", Feature.ORE.withConfiguration(new OreFeatureConfig(
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ModBlocks.SAPHIRE_ORE.get().getDefaultState(), 4)) //Vein Size
+        overworldOres.add(register("sapphire_ore", Feature.ORE.withConfiguration(new OreFeatureConfig(
+                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ModBlocks.SAPPHIRE_ORE.get().getDefaultState(), 4)) //Vein Size
                 .range(24).square() //Spawn height start
                 .func_242731_b(10))); //Chunk spawn frequency
 

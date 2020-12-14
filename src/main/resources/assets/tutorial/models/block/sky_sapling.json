@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tutorial:blocks/sky_sapling"
+  }
+}

@@ -2,7 +2,7 @@
   "itemGroup.tutorialTab": "Tutorial",
 
   "item.tutorial.ruby": "Ruby",
-  "item.tutorial.saphire": "Saphire",
+  "item.tutorial.sapphire": "Sapphire",
   "item.tutorial.amethyst": "Amethyst",
   "item.tutorial.poison_apple": "Poison Apple",
 
@@ -12,11 +12,11 @@
   "item.tutorial.ruby_shovel": "Ruby Shovel",
   "item.tutorial.ruby_hoe": "Ruby Hoe",
 
-  "item.tutorial.saphire_sword": "Saphire Sword",
-  "item.tutorial.saphire_pickaxe": "Saphire Pickaxe",
-  "item.tutorial.saphire_axe": "Saphire Axe",
-  "item.tutorial.saphire_shovel": "Saphire Shovel",
-  "item.tutorial.saphire_hoe": "Saphire Hoe",
+  "item.tutorial.sapphire_sword": "Sapphire Sword",
+  "item.tutorial.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.tutorial.sapphire_axe": "Sapphire Axe",
+  "item.tutorial.sapphire_shovel": "Sapphire Shovel",
+  "item.tutorial.sapphire_hoe": "Sapphire Hoe",
 
   "item.tutorial.amethyst_sword": "Amethyst Sword",
   "item.tutorial.amethyst_pickaxe": "Amethyst Pickaxe",
@@ -24,27 +24,27 @@
   "item.tutorial.amethyst_shovel": "Amethyst Shovel",
   "item.tutorial.amethyst_hoe": "Amethyst Hoe",
 
-  "item.tutorial.ruby_helpmet": "Ruby Helmet",
+  "item.tutorial.ruby_helmet": "Ruby Helmet",
   "item.tutorial.ruby_chestplate": "Ruby Chestplate",
   "item.tutorial.ruby_leggings": "Ruby Leggings",
   "item.tutorial.ruby_boots": "Ruby Boots",
 
-  "item.tutorial.saphire_helpmet": "Saphire Helmet",
-  "item.tutorial.saphire_chestplate": "Saphire Chestplate",
-  "item.tutorial.saphire_leggings": "Saphire Leggings",
-  "item.tutorial.saphire_boots": "Saphire Boots",
+  "item.tutorial.sapphire_helmet": "Sapphire Helmet",
+  "item.tutorial.sapphire_chestplate": "Sapphire Chestplate",
+  "item.tutorial.sapphire_leggings": "Sapphire Leggings",
+  "item.tutorial.sapphire_boots": "Sapphire Boots",
 
-  "item.tutorial.amethyst_helpmet": "Amethyst Helmet",
+  "item.tutorial.amethyst_helmet": "Amethyst Helmet",
   "item.tutorial.amethyst_chestplate": "Amethyst Chestplate",
   "item.tutorial.amethyst_leggings": "Amethyst Leggings",
   "item.tutorial.amethyst_boots": "Amethyst Boots",
 
   "block.tutorial.ruby_block": "Block Of Ruby",
-  "block.tutorial.saphire_block": "Block Of Saphire",
+  "block.tutorial.sapphire_block": "Block Of Sapphire",
   "block.tutorial.amethyst_block": "Block Of Amethyst",
 
   "block.tutorial.ruby_ore": "Ruby Ore",
-  "block.tutorial.saphire_ore": "Saphire Ore",
+  "block.tutorial.sapphire_ore": "Sapphire Ore",
   "block.tutorial.amethyst_ore": "Amethyst Ore",
 
   "block.tutorial.oven": "Oven",

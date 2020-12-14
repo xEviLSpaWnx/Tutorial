@@ -11,8 +11,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class SaphireOre extends OreBlock {
-    public SaphireOre() {
+public class SapphireOre extends OreBlock {
+    public SapphireOre() {
         super(Block.Properties.create(Material.IRON)
                 .hardnessAndResistance(3.0f, 4.0f)
                 .sound(SoundType.STONE)
